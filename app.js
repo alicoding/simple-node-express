@@ -1,6 +1,7 @@
 var express = require('express'),
     path = require('path'),
-    nunjucks = require('nunjucks');
+    nunjucks = require('nunjucks'),
+    uslug = require('uslug');
 
 
 var app = express(),
@@ -13,7 +14,10 @@ nunjucksEnv.express( app );
 app.use( express.logger());
 
 app.get( "/", function( req, res ) {
-  res.render( "index.html" );
+	var someInput = "This is the title that will be process by uslug";
+  res.render( "index.html", {
+  	output: uslug(someInput)
+  });
 });
 
 app.listen(8000, function() {
