@@ -1,0 +1,12 @@
+{
+  "name": "simple-express-app",
+  "description": "A Simple NodeJS Express App",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "express": "3.4.5",
+    "nunjucks": "1.0.0"
+  },
+  "author": "Ali Al Dallal <ali@alicoding.com>",
+  "license": "MIT"
+}
